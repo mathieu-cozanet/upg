@@ -1,3 +1,4 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
 *
 {
     margin: 0;
@@ -19,6 +20,17 @@
     height: 100vh; /* Ajustez cette valeur selon vos besoins */
     background-color: #f0f0f0; /* Exemple de couleur de fond */
 }
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* z-index: -1; Place the video behind other content */
+}
+
 .banner .clouds {
     position: absolute;
     top: 0;
@@ -27,16 +39,19 @@
     height: 100%;
     overflow: hidden;
 }
+
 .banner-logo {
     width: 250px; /* Ajustez cette valeur selon vos besoins */
     height: auto; /* Maintient le ratio d'aspect de l'image */
 }
+
 .banner .clouds img {
     position: absolute;
     bottom: 0;
     max-width: 100%;
     animation: animate calc(8s * var(--isolation)) linear infinite;
 }
+
 @keyframes animate {
     0% {
         transform: translateX(-100%);
@@ -45,6 +60,7 @@
         transform: translateX(100%);
     }
 }
+
 section
 {
     position: relative;
@@ -67,22 +83,6 @@ section
     height: 100%;
     border: 0;
 }
-
-#servers
-{
-    /* background: #ff0000; */
-}
-
-#about
-{
-    /* background: #00ff00; */
-}
-
-#donate
-{
-    /* background: #0000ff; */
-}
-
 
 .servers-container {
     display: flex;
@@ -149,10 +149,16 @@ h2
     transition: .5s;
 }
 
-h2:hover
+.h3
 {
-    color: #05fd07;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #000000;
+    transition: .5s;
+    
 }
+
 h3
 {
     margin-bottom: 20px;
@@ -167,6 +173,7 @@ h3
     padding: 40px 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
 }
 
 #donate h2 {
@@ -205,6 +212,7 @@ h3
     font-size: 1em;
     border-radius: 5px;
     transition: background-color 0.3s;
+
 }
 
 .btn-primary:hover {
@@ -213,7 +221,7 @@ h3
 
 
 .text-center {
-    font-size: 2em;
+    font-size: 1em;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -261,5 +269,126 @@ h3
 
 .fixed-width {
     width: 300px; /* Définissez la largeur fixe souhaitée */
+}
+
+table, td {
+    border: none !important;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+  .fullscreen-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* height: 100%; */
+    z-index: 9999;
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    background: #000000;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  footer .social_icon, footer .menu {
+    position: relative;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    margin: 10px 0;
+    z-index: 2;
+  }
+  
+  footer .social_icon li, footer .menu li {
+    list-style: none;
+  }
+  footer .social_icon li a {
+    font-size: 2em;
+    color: #5C5C5C;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+  }
+  footer .social_icon li a:hover {
+    transform: translateY(-15px);
+    color: rgb(51, 255, 0);
+  }
+  
+  footer .menu li a {
+    font-size: 1.2em;
+    color: #ffffff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    text-decoration: none;
+    opacity: 0.75;
+  }
+  footer .menu li a:hover {
+    opacity: 1;
+    color: rgb(51, 255, 0);;
+  }
+  p {
+    color : #eee;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+  }
+  
+  
+  footer .clouds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transform: scaleY(-1);
+    margin-bottom: 50px;
+}
+  
+footer .clouds img {
+    position: absolute;
+    bottom: 0;
+    max-width: 100%;
+    animation: animateClouds 20s linear infinite;
+    width: 100%;
+    height: 100%;
+}
+
+footer .clouds img {
+    position: absolute;
+    bottom: 0;
+    max-width: 100%;
+    animation: animate calc(10s * var(--isolation)) linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+footer .gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, white 5%, transparent 100%);
+    z-index: 1; /* Place le dégradé au-dessus des autres éléments */
 }
 
