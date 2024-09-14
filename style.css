@@ -90,9 +90,9 @@ section
 
 .navbar{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    padding: 20px 100px;
+    /* padding: 20px 100px; */
     position: fixed;
     top: 0;
     width: 100%;
@@ -104,7 +104,8 @@ section
 
 .nav-logo {
     width: 90px; 
-    height: auto; 
+    height: auto;
+   margin-right: 150px;
 }
 
 .navbar a {
@@ -112,7 +113,7 @@ section
     font-size: 1.1em !important;
     color: #000000 !important;
     text-decoration: none !important;
-    padding: 6px 20px !important;
+    /* padding: 6px 20px !important; */
     transition: .5s !important;
 }
 .navbar a:hover {
@@ -138,12 +139,8 @@ section
 
 .navbar-menu {
     display: flex;
-    gap: 20px;
-}
-
-.navbar-menu {
-    display: flex;
-    gap: 20px;
+    justify-content: space-between;
+    gap: 150px;
 }
 
 .burger-menu {
@@ -184,7 +181,7 @@ section
 }
 
 .mobile-menu.open {
-    display: flex;
+    display: block;
 }
 
 h2
@@ -413,45 +410,6 @@ footer .clouds img {
     height: 100%;
 }
 
-/* footer .clouds img:nth-child(1) {
-    animation-delay: 1s;
-}
-
-footer .clouds img:nth-child(2) {
-    animation-delay: 1s;
-}
-
-footer .clouds img:nth-child(3) {
-    animation-delay: 1s;
-}
-
-footer .clouds img:nth-child(4) {
-    animation-delay: 1s;
-}
-
-footer .clouds img:nth-child(5) {
-    animation-delay: 1s;
-}
-footer .clouds img:nth-child(6) {
-    animation-delay: 1s;
-}
-
-footer .clouds img:nth-child(7) {
-    animation-delay: 1s;
-}
-
-footer .clouds img:nth-child(8) {
-    animation-delay: 1s;
-}
-
-footer .clouds img:nth-child(9) {
-    animation-delay: 1s;
-}
-
-footer .clouds img:nth-child(10) {
-    animation-delay: 15s;
-} */
-
 footer .clouds img {
     position: absolute;
     bottom: 0;
@@ -505,4 +463,66 @@ footer .gradient-overlay {
         max-width: 100px;
     }
 
+}
+
+/* Styles pour la popup */
+.cookie-popup {
+    display: none; /* Masqué par défaut */
+    position: fixed;
+    bottom: 0; /* Aligner en bas de l'écran */
+    left: 0; /* Aligner à gauche de l'écran */
+    width: 100%; /* Prendre toute la largeur de l'écran */
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    border-radius: 0; /* Supprimer les coins arrondis */
+}
+
+
+.cookie-popup-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cookie-popup-content p {
+    margin-bottom: 15px;
+    text-align: center;
+    color: #000000;
+}
+
+.cookie-popup-content .btn {
+    margin: 5px;
+}
+.cookie-popup-content .btn-primary:hover {
+    margin: 5px;
+    background-color: #05fd07;
+}
+.cookie-popup-content .btn-secondary:hover {
+    margin: 5px;
+    background-color: #c00000;
+}
+.cookie-popup-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Espace entre les boutons */
+}
+
+.svg-icon {
+    width: 32px; /* Ajustez cette valeur selon vos besoins */
+    height: 32px; /* Ajustez cette valeur selon vos besoins */
+    margin-top: -20px;
+}
+
+*/* Styles pour les puces des listes */
+ul {
+    list-style-type: disc; /* Utiliser des puces de type disque */
+    padding-left: 20px; /* Ajouter un peu de marge à gauche */
+}
+
+ul ul {
+    list-style-type: circle; /* Utiliser des puces de type cercle pour les sous-listes */
+    padding-left: 20px; /* Ajouter un peu de marge à gauche pour les sous-listes */
 }
