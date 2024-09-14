@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>document.getElementsByTagName("html")[0].className += " js";</script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/donate.css">
+    <!-- <link rel="stylesheet" href="add-to-cart-interaction-master/assets/css/style.css"> -->
+    <title>Document</title>
+</head>
+<body>
+
+    <!--NAVBAR-->
+    <nav class="navbar">
+        <a class="navbar-brand" href="#"><img src="upg.png" alt="" class="nav-logo"></a>
+        <div class="navbar-menu">
+            <a class="navbar-brand" href="#">Home<span></span></a>
+            <a class="navbar-brand" href="#servers">Servers<span></span></a>
+            <a class="navbar-brand" href="#donate">Donate<span></span></a>
+            <a class="navbar-brand" href="https://discord.gg/UPGDayZ">Discord<span></span></a>
+        </div>
+        <button class="burger-menu" id="burger-menu">
+            <ion-icon name="menu-outline"></ion-icon>
+
+        </button>
+    </nav>
+
+    <!--MOBILE MENU-->
+    <div class="mobile-menu" id="mobile-menu">
+        <a class="navbar-brand" href="#">Home<span></span></a>
+        <a class="navbar-brand" href="#servers">Servers<span></span></a>
+        <a class="navbar-brand" href="#donate">Donate<span></span></a>
+        <a class="navbar-brand" href="https://discord.gg/UPGDayZ">Discord<span></span></a>
+    </div>
+
+    <!--HEADER-->
+
+    <div class="banner">
+        <!-- <video autoplay muted class="background-video">
+            <source src="./assets/vid/v1.mp4" type="video/mp4" id="myVideo">
+            Your browser does not support the video tag.
+        </video> -->
+
+        <video id="intro-video" autoplay muted class="fullscreen-video">
+            <source src="./assets/vid/v1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="text-center">
+            <img src="upg.png" alt="logo from upg" class="banner-logo img-fluid">
+        </div>
+        <div class="clouds d-flex justify-content-around">
+            <img src="cloud1.png" style="--isolation: 1;" class="img-fluid">
+            <img src="cloud2.png" style="--isolation: 2;" class="img-fluid">
+            <img src="cloud4.png" style="--isolation: 3;" class="img-fluid">
+            <img src="cloud5.png" style="--isolation: 4;" class="img-fluid">
+            <img src="cloud3.png" style="--isolation: 5;" class="img-fluid">
+        </div>
+    </div>
+
+    <!--SERVER SECTION-->
+
+    <section class="container mt-5" id="servers">
+        <h2>Our Servers</h2>
+        <div class="servers-container">
+        <script type="application/javascript">window.addEventListener('message',function(e){if(e.data.uid&&e.data.type==='sizeUpdate'){var i = document.querySelector('iframe[name="'+e.data.uid+'"]');i.style.width = e.data.payload.width;i.style.height = e.data.payload.height;}});</script>
+
+        <iframe src="https://cdn.battlemetrics.com/b/standardVertical/27185755.html?foreground=%23EEEEEE&linkColor=%231185ec&lines=%23333333&background=%23222222&chart=players%3A24H&chartColor=%23FF0700&maxPlayersHeight=300" frameborder="0" style="border:0" name="rqsul" class="server1">
+        </iframe>
+
+        <script type="application/javascript">window.addEventListener('message',function(e){if(e.data.uid&&e.data.type==='sizeUpdate'){var i = document.querySelector('iframe[name="'+e.data.uid+'"]');i.style.width = e.data.payload.width;i.style.height = e.data.payload.height;}});</script>
+        
+        <iframe src="https://cdn.battlemetrics.com/b/standardVertical/27352430.html?foreground=%23EEEEEE&linkColor=%231185ec&lines=%23333333&background=%23222222&chart=players%3A24H&chartColor=%23FF0700&maxPlayersHeight=300" frameborder="0" style="border:0" name="yumky" class="server1">
+        </iframe></div>
+    </section>
+
+    <!--DONATE SECTION-->
+
+    <section class="container mt-5" id="donate">
+        <h2 id="prio">Donate</h2>
+        <p>All donations go directly to improving the server along with making sure UPG can provide a flawless DayZ exprience for everyone for the foreseeable future. Press the button below to be prompted to donate any amount.
+        </p>
+        <table class="table table-bordered">
+                    <td colspan="2" >
+                        <div class="row justify-content-center">
+                            <div class="col-md-6 fixed-width" id="foo">
+                                <div class="card mb-3">
+                                    <div class="card-header text-center">
+                                        <i class="fas fa-star"></i>
+                                        <img src="assets\img\donations\prioqueue.png" alt="logo from upg" class="banner-logo img-fluid"><span style="color: black; font-weight: bold;">$10 USD</span>
+                                    </div>
+                                    <div class="card-body text-center">
+                                        <a href="#popup2"><img src="info.png"></a>
+                                        <a class="btn btn-primary" href="https://www.patreon.com/upgdayz" target="_blank">Get</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td colspan="3">
+                        <div class="row justify-content-center">
+                            <div class="col-md-6 fixed-width">
+                                <div class="card mb-3">
+                                    <div class="card-header text-center">
+                                        <i class="fas fa-star"></i> 
+                                        <img src="assets\img\donations\tag.png" alt="logo from upg" class="banner-logo img-fluid"><span style="color: black; font-weight: bold;">$10 USD</span>
+                                    </div>
+                                    <div class="card-body text-center" id="supporter">
+                                        <a href="#popup3"><img src="info.png"></a>
+                                        <button class="btn btn-primary js-cd-add-to-cart" href="#0" item-number="23" data-price="10">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+              
+        </table>
+        <h3 class="h3">Supporter Packages</h3>
+        <table class="table table-bordered">
+            
+                    <!-- BRONZE SUPPORTER -->
+                    <td colspan="3">
+                        <div class="row justify-content-center">
+                            <div class="col-md-6">
+                                <div class="card mb-3">
+                                    <div class="card-header text-center">
+                                        <i class="fas fa-star"></i> 
+                                        <img src="assets\img\donations\bronze.png" alt="logo from upg" class="banner-logo img-fluid"><span style="color: black; font-weight: bold;">$15 USD</span>
+                                    </div>
+                                    <div class="card-body text-center">
+                                        <a href="#popup4"><img src="info.png"></a>
+                                        <button class="btn btn-primary js-cd-add-to-cart" href="#0" item-number="24" data-price="15">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <!-- SILVER SUPPORTER -->
+                    <td colspan="3">
+                        <div class="row justify-content-center">
+                            <div class="col-md-6">
+                                <div class="card mb-3">
+                                    <div class="card-header text-center">
+                                        <i class="fas fa-star"></i> 
+                                        <img src="assets\img\donations\silver.png" alt="logo from upg" class="banner-logo img-fluid"><span style="color: black; font-weight: bold;">$30 USD</span>
+                                    </div>
+                                    <div class="card-body text-center">
+                                        <a href="#popup5"><img src="info.png"></a>
+                                        <button class="btn btn-primary js-cd-add-to-cart" href="#0" item-number="25" data-price="30">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <!--GOLD SUPPORTER-->
+                    <td colspan="3">
+                        <div class="row justify-content-center">
+                            <div class="col-md-6">
+                                <div class="card mb-3">
+                                    <div class="card-header text-center">
+                                        <i class="fas fa-star"></i> 
+                                        <img src="assets\img\donations\gold.png" alt="logo from upg" class="banner-logo img-fluid"><span style="color: black; font-weight: bold;">$50 USD</span>
+                                    </div>
+                                    <div class="card-body text-center" id="clan">
+                                        <a href="#popup6"><img src="info.png"></a>
+                                        <button class="btn btn-primary js-cd-add-to-cart" href="#0" item-number="26" data-price="50">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+            
+        </table>
+        <h3 class="h3">Clan Bundles</h3>
+        <table class="table table-bordered">
+                    <!--Clan Bundle Lvl 1-->
+                    <td colspan="5">
+                        <div class="row justify-content-center">
+                            <div class="col-md-6">
+                                <div class="card mb-3">
+                                    <div class="card-header text-center">
+                                        <i class="fas fa-star"></i> 
+                                        <img src="assets\img\donations\clan1.png" alt="logo from upg" class="banner-logo img-fluid"><span style="color: black; font-weight: bold;">$75 USD</span>
+                                    </div>
+                                    <div class="card-body text-center">
+                                        <a href="#popup7"><img src="info.png"></a>
+                                        <button class="btn btn-primary js-cd-add-to-cart" href="#0" item-number="27" data-price="75">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <!--Clan Bundle Lvl 2-->
+                    <td colspan="5">
+                        <div class="row justify-content-center">
+                            <div class="col-md-6">
+                                <div class="card mb-3">
+                                    <div class="card-header text-center">
+                                        <i class="fas fa-star"></i> 
+                                        <img src="assets\img\donations\clan2.png" alt="logo from upg" class="banner-logo img-fluid"><span style="color: black; font-weight: bold;">$100 USD</span>
+                                    </div>
+                                    <div class="card-body text-center">
+                                        <a href="#popup8"><img src="info.png"></a>
+                                        <button class="btn btn-primary js-cd-add-to-cart" href="#0" item-number="28" data-price="100">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <!--Clan Bundle Lvl 3-->
+                    <td colspan="5">
+                        <div class="row justify-content-center">
+                            <div class="col-md-6">
+                                <div class="card mb-3">
+                                    <div class="card-header text-center">
+                                        <i class="fas fa-star"></i> 
+                                        <img src="assets\img\donations\clan3.png" alt="logo from upg" class="banner-logo img-fluid"><span style="color: black; font-weight: bold;">$125 USD</span>
+                                    </div>
+                                    <div class="card-body text-center" id="retexture">
+                                        <a href="#popup9"><img src="info.png"></a>
+                                        <button class="btn btn-primary js-cd-add-to-cart" href="#0" item-number="29" data-price="125">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>          
+        </table>
+        <h3 class="h3">Retexture</h3>
+        <table class="table table-bordered">
+                    <!--Clothing-->
+                    <td colspan="5">
+                        <div class="row justify-content-center">
+                            <div class="col-md-6">
+                                <div class="card mb-3">
+                                    <div class="card-header text-center">
+                                        <i class="fas fa-star"></i> 
+                                        <img src="assets\img\donations\clothing.png" alt="logo from upg" class="banner-logo img-fluid"><span style="color: black; font-weight: bold;">$20 USD</span>
+                                    </div>
+                                    <div class="card-body text-center">
+                                        <a href="#popup10"><img src="info.png"></a>
+                                        <button class="btn btn-primary js-cd-add-to-cart" href="#0" item-number="30" data-price="20">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <!--Armor-->
+                    <td colspan="5">
+                        <div class="row justify-content-center">
+                            <div class="col-md-6">
+                                <div class="card mb-3">
+                                    <div class="card-header text-center">
+                                        <i class="fas fa-star"></i> 
+                                        <img src="assets\img\donations\armor.png" alt="logo from upg" class="banner-logo img-fluid"><span style="color: black; font-weight: bold;">$30 USD</span>
+                                    </div>
+                                    <div class="card-body text-center">
+                                        <a href="#popup11"><img src="info.png"></a>
+                                        <button class="btn btn-primary js-cd-add-to-cart" href="#0" item-number="31" data-price="30">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <!--Weapon-->
+                    <td colspan="5">
+                        <div class="row justify-content-center">
+                            <div class="col-md-6">
+                                <div class="card mb-3">
+                                    <div class="card-header text-center">
+                                        <i class="fas fa-star"></i> 
+                                        <img src="assets\img\donations\weapon.png" alt="logo from upg" class="banner-logo img-fluid"><span style="color: black; font-weight: bold;">$30 USD</span>
+                                    </div>
+                                    <div class="card-body text-center">
+                                        <a href="#popup12"><img src="info.png"></a>
+                                        <button class="btn btn-primary js-cd-add-to-cart" href="#0" item-number="33" data-price="30">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>           
+        </table>
+        <table class="table table-bordered">
+                    <!--Melee-->
+                    <td colspan="5">
+                        <div class="row justify-content-center">
+                            <div class="col-md-6">
+                                <div class="card mb-3">
+                                    <div class="card-header text-center">
+                                        <i class="fas fa-star"></i> 
+                                        <img src="assets\img\donations\melee.png" alt="logo from upg" class="banner-logo img-fluid"><span style="color: black; font-weight: bold;">$10 USD</span>
+                                    </div>
+                                    <div class="card-body text-center">
+                                        <a href="#popup13"><img src="info.png"></a>
+                                        <button class="btn btn-primary js-cd-add-to-cart" href="#0" item-number="34" data-price="10">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <!--Flag-->
+                    <td colspan="5">
+                        <div class="row justify-content-center">
+                            <div class="col-md-6">
+                                <div class="card mb-3">
+                                    <div class="card-header text-center">
+                                        <i class="fas fa-star"></i> 
+                                        <img src="assets\img\donations\flag.png" alt="logo from upg" class="banner-logo img-fluid"><span style="color: black; font-weight: bold;">$5 USD</span>
+                                    </div>
+                                    <div class="card-body text-center">
+                                        <a href="#popup14"><img src="info.png"></a>
+                                        <button class="btn btn-primary js-cd-add-to-cart" href="#0" item-number="35" data-price="5">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <!--Pouch-->
+                    <td colspan="5">
+                        <div class="row justify-content-center">
+                            <div class="col-md-6">
+                                <div class="card mb-3">
+                                    <div class="card-header text-center">
+                                        <i class="fas fa-star"></i> 
+                                        <img src="assets\img\donations\pouch.png" alt="logo from upg" class="banner-logo img-fluid"><span style="color: black; font-weight: bold;">$5 USD</span>
+                                    </div>
+                                    <div class="card-body text-center">
+                                        <a href="#popup15"><img src="info.png"></a>
+                                        <button class="btn btn-primary js-cd-add-to-cart" href="#0" item-number="32" data-price="10">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>           
+        </table>
+        <!--PopUps-->    
+        <div id="popup1" class="overlay1">
+            <div class="popup1">
+                <h2>Thank you!</h2>
+                <a class="close1" href="#">&times;</a>
+                <div class="content1">
+                    Donations help keep UPG up and running, thank you for contributing to the community. <br> <br>
+                    Please open a donation ticket in <a href="https://discord.gg/upgDayZ" >discord</a> if you purcahsed a item.
+                </div>
+            </div>
+        </div>
+        <div id="popup2" class="overlay1">
+            <div class="popup1">
+                <h2>Priority Queue</h2>
+                <a class="close1" href="#prio">&times;</a>
+                <div class="content1">
+                    Priority queue grants you the ability to skip the queue whenever you load into any of our servers.<br> <br>
+                    Press the 'Get' button below to be brought to our patreon!
+                </div>
+            </div>
+        </div>
+        <div id="popup3" class="overlay1">
+            <div class="popup1">
+                <h2>Custom Clan Tag</h2>
+                <a class="close1" href="#prio">&times;</a>
+                <div class="content1">
+                    Custom Clan Tag allows you make your clan tag on all of our servers any color that you want. <br>
+                    As an example: <span style="color: blue;">[CLAN]</span> YourName <br> <br>
+                    Use the 'Add to Cart' button below to add it to your cart!
+                </div>
+            </div>
+        </div>
+        <div id="popup4" class="overlay1">
+            <div class="popup1">
+                <h2>Bronze Supporter</h2>
+                <a class="close1" href="#supporter">&times;</a>
+                <div class="content1">
+                    <ul>
+					<li>- Priority Queue (30 days)</li>
+					<li>- Clan Tag Color (30 days)</li>
+					</ul> <br>
+                    Use the 'Add to Cart' button below to add it to your cart!
+                </div>
+            </div>
+        </div>
+        <div id="popup5" class="overlay1">
+            <div class="popup1">
+                <h2>Silver Supporter</h2>
+                <a class="close1" href="#supporter">&times;</a>
+                <div class="content1">
+                    <ul>
+                    <li>- Priority Queue (60 days)</li>
+					<li>- Clan Tag Color (60 days)</li>
+					<li>- 1x Clothing Retexture</li>
+					</ul> <br>
+                    Use the 'Add to Cart' button below to add it to your cart!
+                </div>
+            </div>
+        </div>
+        <div id="popup6" class="overlay1">
+            <div class="popup1">
+                <h2>Gold Supporter</h2>
+                <a class="close1" href="#supporter">&times;</a>
+                <div class="content1">
+                    <ul>
+                    <li>- Priority Queue (90 days)</li>
+					<li>- Clan Tag Color (90 days)</li>
+					<li>- 1x Clothing Retexture</li>
+					<li>- 1x Armor Retexture</li>
+					</ul> <br>
+                    Use the 'Add to Cart' button below to add it to your cart!
+                </div>
+            </div>
+        </div>
+        <div id="popup7" class="overlay1">
+            <div class="popup1">
+                <h2>Clan Bundle One</h2>
+                <a class="close1" href="#clan">&times;</a>
+                <div class="content1">
+                    <ul>
+                    <li>- 2x Priority Queue (30 days)</li>
+					<li>- Clan Tag Color (30 days)</li>
+					<li>- Clothing Retexture: Top, Pants, Shoes, Gloves & Backpack</li>
+					</ul> <br>
+                    Use the 'Add to Cart' button below to add it to your cart!
+                </div>
+            </div>
+        </div>
+        <div id="popup8" class="overlay1">
+            <div class="popup1">
+                <h2>Clan Bundle Two</h2>
+                <a class="close1" href="#clan">&times;</a>
+                <div class="content1">
+                    <ul>
+                    <li>- 4x Priority Queue (30 days)</li>
+					<li>- Clan Tag Color (30 days)</li>
+					<li>- Clothing Retexture: Top, Pants, Shoes, Gloves, Balaclava & Backpack</li>
+					<li>- Armor Retexture: Helmet & Vest</li>
+					</ul> <br>
+                    Use the 'Add to Cart' button below to add it to your cart!
+                </div>
+            </div>
+        </div>
+        <div id="popup9" class="overlay1">
+            <div class="popup1">
+                <h2>Clan Bundle Three</h2>
+                <a class="close1" href="#clan">&times;</a>
+                <div class="content1">
+                    <ul>
+                    <li>- 6x Priority Queue (30 days)</li>
+					<li>- Clan Tag Color (30 days)</li>
+					<li>- Clothing Retexture: Top, Pants, Shoes, Gloves, Balaclava & Backpack</li>
+					<li>- Armor Retexture: Helmet & Vest</li>
+					<li>- Weapon Retexture: Any Weapon</li>
+					</ul> <br>
+                    Use the 'Add to Cart' button below to add it to your cart!
+                </div>
+            </div>
+        </div>
+        <div id="popup10" class="overlay1">
+            <div class="popup1">
+                <h2>Clothing Retexture</h2>
+                <a class="close1" href="#retexture">&times;</a>
+                <div class="content1">
+                    Retexture any ONE clothing. For example this includes: Jackets, Pants, Shoes, Unarmored Vests & More. <br><br>
+                    Use the 'Add to Cart' button below to add it to your cart!
+                </div>
+            </div>
+        </div>
+        <div id="popup11" class="overlay1">
+            <div class="popup1">
+                <h2>Armor Retexture</h2>
+                <a class="close1" href="#retexture">&times;</a>
+                <div class="content1">
+                    Retexture any ONE Armor. For example this includes: Armored Vest & Helmets. <br><br>
+                    Use the 'Add to Cart' button below to add it to your cart!
+                </div>
+            </div>
+        </div>
+        <div id="popup12" class="overlay1">
+            <div class="popup1">
+                <h2>Weapon Retexture</h2>
+                <a class="close1" href="#retexture">&times;</a>
+                <div class="content1">
+                    Retexture any ONE Weapon. <br><br>
+                    Use the 'Add to Cart' button below to add it to your cart!
+                </div>
+            </div>
+        </div>
+        <div id="popup13" class="overlay1">
+            <div class="popup1">
+                <h2>Melee Retexture</h2>
+                <a class="close1" href="#retexture">&times;</a>
+                <div class="content1">
+                    Retexture any ONE Melee Weapon. <br><br>
+                    Use the 'Add to Cart' button below to add it to your cart!
+                </div>
+            </div>
+        </div>
+        <div id="popup14" class="overlay1">
+            <div class="popup1">
+                <h2>Flag Retexture</h2>
+                <a class="close1" href="#retexture">&times;</a>
+                <div class="content1">
+                    Retexture ONE Flag. <br><br>
+                    Use the 'Add to Cart' button below to add it to your cart!
+                </div>
+            </div>
+        </div>
+        <div id="popup15" class="overlay1">
+            <div class="popup1">
+                <h2>Pouch Retexture</h2>
+                <a class="close1" href="#retexture">&times;</a>
+                <div class="content1">
+                    Retexture any ONE pouch. <br><br>
+                    Use the 'Add to Cart' button below to add it to your cart!
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!--DISCORD SECTION-->
+
+    <footer>
+        <div class="gradient-overlay"></div>
+        <div class="clouds d-flex justify-content-around">
+            <img src="cloud1.png" style="--isolation: 1;" class="img-fluid">
+            <img src="cloud2.png" style="--isolation: 2;" class="img-fluid">
+            <img src="cloud4.png" style="--isolation: 3;" class="img-fluid">
+            <img src="cloud5.png" style="--isolation: 4;" class="img-fluid">
+            <img src="cloud3.png" style="--isolation: 5;" class="img-fluid">
+            <img src="cloud1.png" style="--isolation: 6;" class="img-fluid">
+            <img src="cloud2.png" style="--isolation: 7;" class="img-fluid">
+            <img src="cloud4.png" style="--isolation: 8;" class="img-fluid">
+            <img src="cloud5.png" style="--isolation: 9;" class="img-fluid">
+            <img src="cloud3.png" style="--isolation: 10;" class="img-fluid">
+        </div>
+        <ul class="social_icon">
+          <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+          <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+          <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+          <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+        </ul>
+        
+        <ul class="menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#servers">Servers</a></li>
+          <li><a href="#donate">donate</a></li>
+          <li><a href="https://discord.gg/UPGDayZ">discord</a></li>
+        </ul>
+      </footer>
+      
+
+    <!--CART SECTION-->
+    <div class="cd-cart cd-cart--empty js-cd-cart">
+        <a href="#0" class="cd-cart__trigger text-replace">
+            
+            <ul class="cd-cart__count"> <!-- cart items count -->
+                <li>0</li>
+                <li>0</li>
+            </ul> <!-- .cd-cart__count -->
+        </a>
+    
+        <div class="cd-cart__content">
+            <div class="cd-cart__layout">
+                <header class="cd-cart__header">
+                    <h2>Cart</h2>
+                    <span class="cd-cart__undo">Item removed. <a href="#0">Undo</a></span>
+                </header>
+                
+                <div class="cd-cart__body">
+                    <ul>
+                        <!-- products added to the cart will be inserted here using JavaScript -->
+                    </ul>
+                </div>
+    
+                <footer class="cd-cart__footer" >
+                     <a href="#popup1" onclick="myFunction99()" class="cd-cart__checkout">
+                    <em>Checkout - $<span id="GFG_Span">0</span>
+                    <svg class="icon icon--sm" viewBox="0 0 24 24"><g fill="none" stroke="currentColor"><line stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x1="3" y1="12" x2="21" y2="12"/><polyline stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="15,6 21,12 15,18 "/></g>
+                    </svg>
+                    </em>
+                    </a>
+                </footer>
+            </div>
+        </div> <!-- .cd-cart__content -->
+    </div> <!-- cd-cart -->
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        // let vid = document.getElementById("intro-video");
+        //     vid.onended = function() {
+        //     window.location.href = 'index.html';
+        // };
+        document.getElementById('intro-video').addEventListener('ended', function() {
+            this.style.display = 'none';
+        });
+    </script>
+    <script>
+        var span = document.getElementById("GFG_Span"); 
+        function myFunction99() {
+        total = span.textContent;
+        var mylink = "https://www.paypal.com/donate/?business=5XE4BPM86Q56L&amount=" + total + "&no_recurring=1&item_name=upgdayz.com&currency_code=USD";
+        window.open(mylink);
+        }
+        
+    </script>
+
+    <!-- <script>
+        var vid = document.getElementById("myVideo");
+                vid.onended = function() {
+                vid.remove()
+                }
+    </script> -->
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="assets/js/util.js"></script> <!-- util functions included in the CodyHouse framework -->
+    <script src="assets/js/main.js"></script> 
+    <script src="assets/js/cookie.js"></script> 
+    <script src="assets/js/burger.js"></script>
+
+
+</body>
+</html>
