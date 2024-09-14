@@ -1,5 +1,3 @@
-//script pour la gestion des cookies
-console.log("cookie.js chargé");
 // we st the cookie
 function setCookie(name, value, days) {
     var expires = "";
@@ -35,31 +33,3 @@ window.onload = function() {
         });
     }
 };
-
-// Script de popup cookie avec acceptation ou refus
-function showCookiePopup() {
-    document.getElementById('cookie-popup').style.display = 'block';
-}
-
-// Vérifier si l'utilisateur a déjà accepté les cookies
-if (!localStorage.getItem('cookiesAccepted')) {
-    showCookiePopup();
-}
-
-// Ajouter un événement au bouton pour accepter les cookies
-document.getElementById('accept-cookies').addEventListener('click', function() {
-    localStorage.setItem('cookiesAccepted', 'true');
-    document.getElementById('cookie-popup').style.display = 'none';
-});
-
-// Fonction pour supprimer le cookie "hasSeenVideo"
-function deleteCookie(name) {
-    document.cookie = name + '=; Max-Age=-99999999;';
-}
-
-// Ajouter un événement au bouton pour refuser les cookies
-document.getElementById('reject-cookies').addEventListener('click', function() {
-    deleteCookie('hasSeenVideo');
-    document.getElementById('cookie-popup').style.display = 'none';
-});
- 

@@ -1,4 +1,3 @@
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
 *
 {
     margin: 0;
@@ -39,19 +38,16 @@
     height: 100%;
     overflow: hidden;
 }
-
 .banner-logo {
     width: 250px; /* Ajustez cette valeur selon vos besoins */
     height: auto; /* Maintient le ratio d'aspect de l'image */
 }
-
 .banner .clouds img {
     position: absolute;
     bottom: 0;
     max-width: 100%;
     animation: animate calc(8s * var(--isolation)) linear infinite;
 }
-
 @keyframes animate {
     0% {
         transform: translateX(-100%);
@@ -60,7 +56,6 @@
         transform: translateX(100%);
     }
 }
-
 section
 {
     position: relative;
@@ -84,6 +79,7 @@ section
     border: 0;
 }
 
+
 .servers-container {
     display: flex;
     justify-content: center;
@@ -101,14 +97,14 @@ section
     top: 0;
     width: 100%;
     height: 10%;
-    background-color: white; /* Assurez-vous que la navbar a un fond pour qu'elle soit visible */
-    z-index: 1000; /* Assurez-vous que la navbar est au-dessus des autres éléments */
+    background-color: white; 
+    z-index: 1000; 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .nav-logo {
-    width: 90px; /* Ajustez cette valeur selon vos besoins */
-    height: auto; /* Maintient le ratio d'aspect de l'image */
+    width: 90px; 
+    height: auto; 
 }
 
 .navbar a {
@@ -138,6 +134,57 @@ section
 .navbar a:hover span {
     transform: scale(1) translateY(0) !important;
     opacity: 1 !important;
+}
+
+.navbar-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.burger-menu {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px; /* Taille de l'icône */
+    color: #000; /* Couleur de l'icône */
+}
+
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #fff;
+    padding: 10px 20px;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Queries pour le menu burger */
+@media (max-width: 768px) {
+    .navbar-menu {
+        display: none;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    .mobile-menu {
+        display: flex;
+    }
+}
+
+.mobile-menu.open {
+    display: flex;
 }
 
 h2
@@ -366,6 +413,45 @@ footer .clouds img {
     height: 100%;
 }
 
+/* footer .clouds img:nth-child(1) {
+    animation-delay: 1s;
+}
+
+footer .clouds img:nth-child(2) {
+    animation-delay: 1s;
+}
+
+footer .clouds img:nth-child(3) {
+    animation-delay: 1s;
+}
+
+footer .clouds img:nth-child(4) {
+    animation-delay: 1s;
+}
+
+footer .clouds img:nth-child(5) {
+    animation-delay: 1s;
+}
+footer .clouds img:nth-child(6) {
+    animation-delay: 1s;
+}
+
+footer .clouds img:nth-child(7) {
+    animation-delay: 1s;
+}
+
+footer .clouds img:nth-child(8) {
+    animation-delay: 1s;
+}
+
+footer .clouds img:nth-child(9) {
+    animation-delay: 1s;
+}
+
+footer .clouds img:nth-child(10) {
+    animation-delay: 15s;
+} */
+
 footer .clouds img {
     position: absolute;
     bottom: 0;
@@ -392,3 +478,31 @@ footer .gradient-overlay {
     z-index: 1; /* Place le dégradé au-dessus des autres éléments */
 }
 
+/* Media Queries pour différentes tailles d'écran */
+@media (max-width: 1200px) {
+    .fixed-width {
+        max-width: 250px;
+    }
+
+}
+
+@media (max-width: 992px) {
+    .fixed-width {
+        max-width: 200px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .fixed-width {
+        max-width: 150px;
+    }
+
+}
+
+@media (max-width: 576px) {
+    .fixed-width {
+        max-width: 100px;
+    }
+
+}

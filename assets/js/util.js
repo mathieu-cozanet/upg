@@ -1,5 +1,3 @@
-console.log("util.js loaded");
-
 // Utility function
 function Util () {};
 

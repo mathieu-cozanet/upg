@@ -1,28 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script>document.getElementsByTagName("html")[0].className += " js";</script>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/donate.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-    <title>Document</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="UPG DAYZ - Your ultimate destination for DayZ servers, donations, and community. Join our Discord for more information.">
+        <meta name="keywords" content="UPG DAYZ, DayZ servers, DayZ donate, DayZ community, DayZ Discord">
+        <meta property="og:title" content="UPG DAYZ">
+        <meta property="og:description" content="Your ultimate destination for DayZ servers, donations, and community. Join our Discord for more information.">
+        <meta property="og:image" content="upg.png">
+        <meta property="og:url" content="https://upgdayz.com">
+        <meta property="og:type" content="website">
+        <script>document.getElementsByTagName("html")[0].className += " js";</script>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/donate.css">
+        <!-- <link rel="stylesheet" href="add-to-cart-interaction-master/assets/css/style.css"> -->
+        <title>UPG DAYZ</title>
+    </head>
 <body>
 
     <!--NAVBAR-->
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar">
         <a class="navbar-brand" href="#"><img src="upg.png" alt="" class="nav-logo"></a>
+        <div class="navbar-menu">
+            <a class="navbar-brand" href="#">Home<span></span></a>
+            <a class="navbar-brand" href="#servers">Servers<span></span></a>
+            <a class="navbar-brand" href="#donate">Donate<span></span></a>
+            <a class="navbar-brand" href="https://discord.gg/UPGDayZ">Discord<span></span></a>
+        </div>
+        <button class="burger-menu" id="burger-menu">
+            <ion-icon name="menu-outline"></ion-icon>
+
+        </button>
+    </nav>
+
+    <!--MOBILE MENU-->
+    <div class="mobile-menu" id="mobile-menu">
         <a class="navbar-brand" href="#">Home<span></span></a>
         <a class="navbar-brand" href="#servers">Servers<span></span></a>
         <a class="navbar-brand" href="#donate">Donate<span></span></a>
         <a class="navbar-brand" href="https://discord.gg/UPGDayZ">Discord<span></span></a>
-        
-    </nav>
+    </div>
 
     <!--HEADER-->
 
@@ -55,13 +74,18 @@
         <div class="servers-container">
         <script type="application/javascript">window.addEventListener('message',function(e){if(e.data.uid&&e.data.type==='sizeUpdate'){var i = document.querySelector('iframe[name="'+e.data.uid+'"]');i.style.width = e.data.payload.width;i.style.height = e.data.payload.height;}});</script>
 
-        <iframe src="https://cdn.battlemetrics.com/b/standardVertical/27185755.html?foreground=%23EEEEEE&linkColor=%231185ec&lines=%23333333&background=%23222222&chart=players%3A24H&chartColor=%23FF0700&maxPlayersHeight=300" frameborder=0 style="border:0" name="rqsul" class="server1">
+        <iframe src="https://cdn.battlemetrics.com/b/standardVertical/27185755.html?foreground=%23EEEEEE&linkColor=%231185ec&lines=%23333333&background=%23222222&chart=players%3A24H&chartColor=%23FF0700&maxPlayersHeight=300" frameborder="0" style="border:0" name="rqsul" class="server1" title="Vanilla+ chernarus server">
         </iframe>
 
         <script type="application/javascript">window.addEventListener('message',function(e){if(e.data.uid&&e.data.type==='sizeUpdate'){var i = document.querySelector('iframe[name="'+e.data.uid+'"]');i.style.width = e.data.payload.width;i.style.height = e.data.payload.height;}});</script>
         
-        <iframe src="https://cdn.battlemetrics.com/b/standardVertical/27352430.html?foreground=%23EEEEEE&linkColor=%231185ec&lines=%23333333&background=%23222222&chart=players%3A24H&chartColor=%23FF0700&maxPlayersHeight=300" frameborder=0 style="border:0" name="yumky" class="server1">
-        </iframe></div>
+        <iframe src="https://cdn.battlemetrics.com/b/standardVertical/27352430.html?foreground=%23EEEEEE&linkColor=%231185ec&lines=%23333333&background=%23222222&chart=players%3A24H&chartColor=%23FF0700&maxPlayersHeight=300" frameborder="0" style="border:0" name="yumky" class="server1" title="Modded chernarus server">
+        </iframe>
+
+        <script type="application/javascript">window.addEventListener('message',function(e){if(e.data.uid&&e.data.type==='sizeUpdate'){var i = document.querySelector('iframe[name="'+e.data.uid+'"]');i.style.width = e.data.payload.width;i.style.height = e.data.payload.height;}});</script>
+
+        <iframe src="https://cdn.battlemetrics.com/b/standardVertical/28922955.html?foreground=%23EEEEEE&linkColor=%231185ec&lines=%23333333&background=%23222222&chart=players%3A24H&chartColor=%23FF0700&maxPlayersHeight=300" frameborder="0" style="border:0" name="qerkw" class="server1" title="Vanilla+ Bitterroot server"></iframe>
+    </div>
     </section>
 
     <!--DONATE SECTION-->
@@ -81,7 +105,7 @@
                                     </div>
                                     <div class="card-body text-center">
                                         <a href="#popup2"><img src="info.png"></a>
-                                        <a class="btn btn-primary" href="https://www.patreon.com/upgdayz" target="_blank">Get</button></a>
+                                        <a class="btn btn-primary" href="https://www.patreon.com/upgdayz" target="_blank">Get</a>
                                     </div>
                                 </div>
                             </div>
@@ -329,7 +353,7 @@
                 <a class="close1" href="#">&times;</a>
                 <div class="content1">
                     Donations help keep UPG up and running, thank you for contributing to the community. <br> <br>
-                    Please open a donation ticket in <a href="https://discord.gg/upgDayZ" >discord</a> if you purchased a item.
+                    Please open a donation ticket in <a href="https://discord.gg/upgDayZ" >discord</a> if you purcahsed a item.
                 </div>
             </div>
         </div>
@@ -504,7 +528,7 @@
 
     </section>
 
-    <!--FOOTER SECTION-->
+    <!--DISCORD SECTION-->
 
     <footer>
         <div class="gradient-overlay"></div>
@@ -521,18 +545,17 @@
             <img src="cloud3.png" style="--isolation: 10;" class="img-fluid">
         </div>
         <ul class="social_icon">
-          <li><a href="https://www.youtube.com/@upgdayz" target="_blank"><i class="bi bi-youtube"></i></a></li>
-          <li><a href="https://twitter.com/UPGDayZ" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
-            <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
-          </svg></a></li>
-          <li><a href="https://discord.gg/UPGDayZ" target="_blank"><i class="bi bi-discord"></i></a></li>
+          <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+          <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+          <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+          <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
         </ul>
         
         <ul class="menu">
           <li><a href="#">Home</a></li>
           <li><a href="#servers">Servers</a></li>
-          <li><a href="#donate">Donate</a></li>
-          <li><a href="https://discord.gg/UPGDayZ">Discord</a></li>
+          <li><a href="#donate">donate</a></li>
+          <li><a href="https://discord.gg/UPGDayZ">discord</a></li>
         </ul>
       </footer>
       
@@ -572,23 +595,17 @@
         </div> <!-- .cd-cart__content -->
     </div> <!-- cd-cart -->
 
-
-    <!-- Popup HTML -->
-<div id="cookie-popup" style="display:none; position:fixed; bottom:20px; left:20px; background-color:white; padding:20px; box-shadow:0px 0px 10px rgba(0,0,0,0.1); z-index:1000;">
-    <img src="upg.png" alt="" class="nav-logo">
-    <p style="color: black;">This site uses cookies to enhance your experience and because they are awsome. Do you accept cookies?</p>
-    <button id="accept-cookies">Accept</button>
-    <button id="reject-cookies">Refuse</button>
-</div>
-
-    <!--Script de lecture video à la première visite -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script>
+        // let vid = document.getElementById("intro-video");
+        //     vid.onended = function() {
+        //     window.location.href = 'index.html';
+        // };
         document.getElementById('intro-video').addEventListener('ended', function() {
             this.style.display = 'none';
         });
     </script>
-
-    <!--Script de panier ebay -->
     <script>
         var span = document.getElementById("GFG_Span"); 
         function myFunction99() {
@@ -596,13 +613,24 @@
         var mylink = "https://www.paypal.com/donate/?business=5XE4BPM86Q56L&amount=" + total + "&no_recurring=1&item_name=upgdayz.com&currency_code=USD";
         window.open(mylink);
         }
+        
     </script>
+
+    <!-- <script>
+        var vid = document.getElementById("myVideo");
+                vid.onended = function() {
+                vid.remove()
+                }
+    </script> -->
+
+    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="assets/js/util.js"></script> <!-- util functions included in the CodyHouse framework -->
     <script src="assets/js/main.js"></script> 
-    <script src="assets/js/cookie.js"></script>
-    <script src="assets/js/cart.js"></script> 
+    <script src="assets/js/cookie.js"></script> 
+    <script src="assets/js/burger.js"></script>
+
 
 </body>
 </html>

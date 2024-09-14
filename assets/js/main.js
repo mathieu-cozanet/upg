@@ -1,5 +1,3 @@
-console.log("main.js loaded");
-
 (function () {
 	// Add to Cart Interaction - by CodyHouse.co
 	var scrt_var = 10; 
@@ -84,13 +82,13 @@ console.log("main.js loaded");
 		  event.preventDefault();
 		  if (animatingQuantity) return;
 		  var cartIsEmpty = Util.hasClass(cart[0], "cd-cart--empty");
-		  //update cart product list
+
 		  addProduct(this, this.getAttribute("item-number"));
-		  //update number of items
+
 		  updateCartCount(cartIsEmpty);
-		  //update total price
+
 		  updateCartTotal(this.getAttribute("data-price"), true);
-		  //show cart
+
 		  Util.removeClass(cart[0], "cd-cart--empty");
 	   }
  
@@ -411,35 +409,42 @@ console.log("main.js loaded");
 		  cartList.insertAdjacentHTML("beforeend", productAdded);
 	   }
  
-	   function removeProduct(product) {
-		  if (cartTimeoutId) clearInterval(cartTimeoutId);
-		  removePreviousProduct(); // prduct previously deleted -> definitively remove it from the cart
- 
-		  var topPosition = product.offsetTop,
-			 productQuantity = Number(
-				product.getElementsByTagName("select")[0].value
-			 ),
-			 productTotPrice =
-				Number(
-				   product
-					  .getElementsByClassName("cd-cart__price")[0]
-					  .innerText.replace("$", "")
-				) * productQuantity;
- 
-		  product.style.top = topPosition + "px";
-		  Util.addClass(product, "cd-cart__product--deleted");
- 
-		  //update items count + total price
-		  updateCartTotal(productTotPrice, false);
-		  updateCartCount(true, -productQuantity);
-		  Util.addClass(cartUndo, "cd-cart__undo--visible");
- 
-		  //wait 8sec before completely remove the item
-		  cartTimeoutId = setTimeout(function () {
-			 Util.removeClass(cartUndo, "cd-cart__undo--visible");
-			 removePreviousProduct();
-		  }, 8000);
-	   }
+	function removeProduct(product) {
+		// si on supprime un produit du panier
+		if (cartTimeoutId) clearInterval(cartTimeoutId);
+		removePreviousProduct(); 
+		// on met à jour le nombre d'articles dans le panier
+		var topPosition = product.offsetTop,
+		// on recupere le prix du produit
+			productQuantity = Number(
+			product.getElementsByTagName("select")[0].value
+			),
+			// on recupere le prix total du produit
+			productTotPrice =
+			Number(
+				product
+					.getElementsByClassName("cd-cart__price")[0]
+					.innerText.replace("$", "")
+			) * productQuantity;
+		// on met à jour le total du panier
+		product.style.top = topPosition + "px";
+		Util.addClass(product, "cd-cart__product--deleted");
+
+		//mise a jour du total
+		updateCartTotal(productTotPrice, false);
+		// on met à jour le nombre d'articles dans le panier
+		updateCartCount(true, -productQuantity);
+		// on affiche le bouton undo
+		Util.addClass(cartUndo, "cd-cart__undo--visible");
+
+		//on attend 8s avant de supprimer definitivement le produit
+		cartTimeoutId = setTimeout(function () {
+		// on supprime definitivement le produit
+			Util.removeClass(cartUndo, "cd-cart__undo--visible");
+			// on met à jour le nombre d'articles dans le panier
+			removePreviousProduct();
+		}, 8000);
+	}
  
 	   function removePreviousProduct() {
 		  // definitively removed a product from the cart (undo not possible anymore)
