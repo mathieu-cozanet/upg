@@ -22,7 +22,7 @@
   padding: 20px;
   background: #fff;
   border-radius: 5px;
-  width: 30%;
+  width: 50%;
   position: relative;
   transition: all 5s ease-in-out;
 }
@@ -50,12 +50,4 @@
   overflow: auto;
 }
 
-.mt-5 td {
-  max-width: 100%;
-  box-sizing: border-box;
-}
 
-.mt-5 .col-m-6 {
-  max-width: 100%;
-  box-sizing: border-box;
-}

@@ -162,11 +162,14 @@ section
     top: 60px;
     left: 0;
     width: 100%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 0px rgba(0, 0, 0, 0.1);
 }
 
 /* Media Queries pour le menu burger */
 @media (max-width: 768px) {
+
+
+
     .navbar-menu {
         display: none;
     }
@@ -184,7 +187,8 @@ section
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 20px;
+    z-index: -2;
 }
 
 h2
@@ -236,11 +240,13 @@ h3
 .mt-5 .col-m-6 {
     max-width: 100%;
     box-sizing: border-box;
+
 }
 
 .mt-5 td {
     max-width: 100%;
     box-sizing: border-box;
+
 }
 
 .card {
@@ -478,9 +484,13 @@ footer .gradient-overlay {
 
 @media (max-width: 576px) {
     .fixed-width {
-        max-width: 100px;
+        max-width: 120px;
     }
 
+    .poil2cul {
+        width: 350px; 
+        /* height: auto; */
+    }
 }
 
 /* Styles pour la popup */
@@ -552,8 +562,8 @@ ul ul {
 }
 
 /* Media query for mobile devices */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .navbar-menu {
         display: none;
     }
-}
+} */
