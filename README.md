@@ -1,19 +1,13 @@
-# Add to Cart Interaction
+# UPG Dayz WEBSITE
 
-A floating cart component that reveals itself when the user adds an item to the cart.
-
-[Article on CodyHouse](https://codyhouse.co/gem/add-to-cart-interaction)
-
-[Demo](https://codyhouse.co/demo/add-to-cart-interaction)
-
-[License](https://codyhouse.co/license)
+Coded by Mathieu COZANET
 
 ## Dependencies
 
-This experiment is built upon the [CodyHouse Framework](https://github.com/CodyHouse/codyhouse-framework).
-
-Make sure to include both style.scss and util.js files of the framework.
+All HTML / CSS and JS
 
 ## Credits
 
 Icons: [Nucleo Library](https://nucleoapp.com/)
+
+Add to Cart [CodyHouse](https://codyhouse.co/license)
