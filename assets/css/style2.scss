@@ -42,7 +42,7 @@
 .cd-cart__content {
 	position: fixed;
 	bottom: 20px;
-	right: 5%;
+	right: 15%;
 	transition: transform .2s;
 	// Force Hardware Acceleration in WebKit
 	transform: translateZ(0);
@@ -632,4 +632,14 @@ body {
   &:hover {
     background-color: lightness(var(--cd-color-4), 0.95);
   }
+}
+
+.mt-5 td {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.mt-5 .col-m-6 {
+  max-width: 100%;
+  box-sizing: border-box;
 }

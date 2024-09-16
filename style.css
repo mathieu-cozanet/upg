@@ -176,12 +176,15 @@ section
     }
 
     .mobile-menu {
-        display: flex;
+        display: none;
     }
 }
 
 .mobile-menu.open {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
 }
 
 h2
@@ -228,6 +231,16 @@ h3
 #donate p {
     color: #666;
     margin-bottom: 30px;
+}
+
+.mt-5 .col-m-6 {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.mt-5 td {
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .card {
@@ -342,6 +355,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: auto;
   }
   
   footer .social_icon, footer .menu {
@@ -424,6 +438,10 @@ footer .clouds img {
     100% {
         transform: translateX(100%);
     }
+}
+
+footer .menu {
+    margin: 0px;
 }
 
 footer .gradient-overlay {
@@ -525,4 +543,17 @@ ul {
 ul ul {
     list-style-type: circle; /* Utiliser des puces de type cercle pour les sous-listes */
     padding-left: 20px; /* Ajouter un peu de marge à gauche pour les sous-listes */
+}
+
+#monetization {
+    background-color: #ffffff;
+    padding: 140px 20px;
+    border-radius: 10px;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .navbar-menu {
+        display: none;
+    }
 }
